@@ -1,8 +1,8 @@
 import * as React from "react";
 import Link from "next/link";
 import { portfolioData } from "@/constants/constants";
-import { Mail, Globe, ArrowUp } from "lucide-react";
-import { GithubIcon, LinkedinIcon, TwitterIcon, DiscordIcon } from "@/components/ui/Icons";
+import { Mail, ArrowUp } from "lucide-react";
+import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/ui/Icons";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,8 +11,6 @@ export function Footer() {
     github: <GithubIcon className="w-4 h-4" />,
     linkedin: <LinkedinIcon className="w-4 h-4" />,
     twitter: <TwitterIcon className="w-4 h-4" />,
-    discord: <DiscordIcon className="w-4 h-4" />,
-    portfolio: <Globe className="w-4 h-4" />,
   };
 
   const navLinks = [
@@ -85,7 +83,7 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2.5 rounded-xl border border-black/10 dark:border-white/10 glass-panel text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-cyan-400 hover:scale-105 active:scale-95 transition-all"
-                    aria-label={`Alex Vance on ${key}`}
+                    aria-label={`${portfolioData.personal.name} on ${key}`}
                   >
                     {socialIconMap[key]}
                   </a>

@@ -17,18 +17,18 @@ export const portfolioData = {
   // 2. Personal Profile Information
   personal: {
     name: "Pankaj Kumar",
-    role: "MERN Stack & AI Automation Developer",
+    role: "Full-Stack Web & AI Automation Developer",
     tagline: "Building scalable full-stack web applications and intelligent AI workflow automations.",
     shortBio: "Computer Science and Engineering student with hands-on experience in MERN stack development and AI workflow automation using n8n. Passionate about building scalable web applications and automated digital pipelines.",
     email: "pankajmahich180@gmail.com",
     phone: "+91 91168 17112",
     location: "Udaipur, Rajasthan, India",
     availability: {
-      status: "Available for MERN & AI Automation Roles",
+      status: "Available for Web Development & AI Automation Projects",
       isAvailable: true,
     },
     resumeUrl: "https://drive.google.com/file/d/1Msd-5d7U7YTGZqZ1VvX_HPYC7JJwV4cH/view?usp=sharing",
-    profileImage: "/images/profile.jpg",
+    profileImage: "/images/pankaj.jpg",
     avatarFallback: "PK",
   },
 
@@ -36,15 +36,15 @@ export const portfolioData = {
   socialLinks: {
     github: "https://github.com/pankajmahich",
     linkedin: "https://www.linkedin.com/in/pankaj-kumar-4a51362a4/",
-    portfolio: "https://portfolio-1lzi.vercel.app",
-    discord: "pankajmahich",
   },
 
   // 4. Hero Section Configuration
   hero: {
-    badge: "Available for Developer & Automation Roles",
+    badge: "Available for Web Development & AI Automation Projects",
     greeting: "Hello, I'm",
-    headlineHighlight: "MERN & AI Automation",
+    headlinePrefix: "Engineering",
+    headlineHighlight: "Modern Web & AI Automation",
+    headlineSuffix: "Architectures",
     description: "Computer Science Engineering student crafting robust full-stack web applications and autonomous AI workflow pipelines with n8n and OpenAI APIs.",
     primaryCta: {
       text: "Explore Projects",
@@ -127,7 +127,6 @@ export const portfolioData = {
         "Built multi-channel email campaign and automated lead follow-up pipelines.",
       ],
       technologies: ["n8n", "OpenAI API", "WordPress API", "Gmail API", "Google Sheets", "Docker", "Git"],
-      companyUrl: "https://deqteq.com",
     },
     {
       company: "CodSoft Virtual Internship",
@@ -143,7 +142,6 @@ export const portfolioData = {
         "Managed collaborative version control workflows using Git and GitHub.",
       ],
       technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "Git", "GitHub"],
-      companyUrl: "https://codsoft.in",
     },
   ],
 
@@ -220,18 +218,6 @@ export const portfolioData = {
       image: "/images/projects/sundown.png",
       technologies: ["HTML", "CSS", "JavaScript", "GSAP", "ScrollTrigger", "Locomotive Scroll"],
       liveUrl: "https://sundown-clone.vercel.app",
-      githubUrl: "https://github.com/pankajmahich",
-    },
-    {
-      id: "spotify-web-clone",
-      title: "Spotify Web UI Clone",
-      category: "Frontend Clones",
-      featured: false,
-      description: "Pixel-perfect replica of the Spotify web interface with responsive audio player grid, playlist navigation, and dark aesthetic.",
-      problemSolved: "Faithfully replicated complex nested music player grids with pure CSS and responsive layouts.",
-      image: "/images/projects/spotify.png",
-      technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-      liveUrl: "https://spotify-ui-clone.vercel.app",
       githubUrl: "https://github.com/pankajmahich",
     },
   ],

@@ -2,18 +2,10 @@ import * as React from "react";
 import { portfolioData } from "@/constants/constants";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
 import { DynamicIcon } from "@/components/ui/DynamicIcon";
 
 export function Skills() {
   const { skills } = portfolioData;
-
-  const levelColorMap: Record<string, "accent" | "success" | "outline" | "default"> = {
-    Expert: "accent",
-    Proficient: "success",
-    Intermediate: "outline",
-    Beginner: "default",
-  };
 
   return (
     <section id="skills" className="py-20 md:py-28 relative scroll-mt-20">
@@ -45,22 +37,14 @@ export function Skills() {
                   {items.map((skill) => (
                     <div
                       key={skill.name}
-                      className="flex items-center justify-between p-3 rounded-xl bg-slate-100/70 dark:bg-white/5 border border-black/5 dark:border-white/5 hover:border-indigo-500/40 hover:bg-slate-200/50 dark:hover:bg-white/10 transition-all duration-200 group"
+                      className="flex items-center gap-3 p-3 rounded-xl bg-slate-100/70 dark:bg-white/5 border border-black/5 dark:border-white/5 hover:border-indigo-500/40 hover:bg-slate-200/50 dark:hover:bg-white/10 transition-all duration-200 group"
                     >
-                      <div className="flex items-center gap-2.5 min-w-0">
-                        <div className="p-1.5 rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-cyan-400 group-hover:scale-110 transition-transform">
-                          <DynamicIcon name={skill.icon} className="w-4 h-4" />
-                        </div>
-                        <span className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 truncate">
-                          {skill.name}
-                        </span>
+                      <div className="p-1.5 rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-cyan-400 group-hover:scale-110 transition-transform shrink-0">
+                        <DynamicIcon name={skill.icon} className="w-4 h-4" />
                       </div>
-                      <Badge
-                        variant={levelColorMap[skill.level] || "outline"}
-                        className="text-[10px] px-2 py-0.5 shrink-0"
-                      >
-                        {skill.level}
-                      </Badge>
+                      <span className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 truncate">
+                        {skill.name}
+                      </span>
                     </div>
                   ))}
                 </div>

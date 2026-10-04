@@ -2,7 +2,7 @@ import * as React from "react";
 
 export function FallbackScene() {
   return (
-    <div className="relative w-full h-[380px] sm:h-[460px] md:h-[520px] flex items-center justify-center">
+    <div className="relative w-full max-w-[480px] h-[340px] sm:h-[420px] md:h-[480px] flex items-center justify-center">
       {/* Ambient Radial Glow */}
       <div className="absolute w-72 h-72 rounded-full bg-gradient-to-tr from-indigo-600/30 via-cyan-500/20 to-purple-600/30 blur-3xl animate-pulse" />
 

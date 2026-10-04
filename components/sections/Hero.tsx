@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { CanvasContainer } from "@/components/3d/CanvasContainer";
 import { ArrowRight, ChevronDown, FileDown, Sparkles } from "lucide-react";
-import { GithubIcon, LinkedinIcon, TwitterIcon, DiscordIcon } from "@/components/ui/Icons";
+import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/ui/Icons";
 
 export function Hero() {
   const { hero, personal, socialLinks, settings } = portfolioData;
@@ -15,7 +15,6 @@ export function Hero() {
     github: <GithubIcon className="w-4 h-4" />,
     linkedin: <LinkedinIcon className="w-4 h-4" />,
     twitter: <TwitterIcon className="w-4 h-4" />,
-    discord: <DiscordIcon className="w-4 h-4" />,
   };
 
   return (
@@ -46,11 +45,11 @@ export function Hero() {
                 {hero.greeting} {personal.name}
               </p>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
-                Engineering{" "}
+                {hero.headlinePrefix || "Engineering"}{" "}
                 <span className="text-gradient">
                   {hero.headlineHighlight}
                 </span>{" "}
-                Web Architectures
+                {hero.headlineSuffix || "Architectures"}
               </h1>
             </div>
 

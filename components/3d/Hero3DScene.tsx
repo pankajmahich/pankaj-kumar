@@ -43,23 +43,23 @@ function InteractiveCore() {
   });
 
   return (
-    <Float speed={2.5} rotationIntensity={0.6} floatIntensity={1.2}>
-      <group position={[0, 0, 0]}>
+    <Float speed={2} rotationIntensity={0.4} floatIntensity={0.4}>
+      <group position={[0, 0, 0]} scale={0.75}>
         {/* Core Solid Polyhedron */}
-        <mesh ref={meshRef} scale={1.8}>
+        <mesh ref={meshRef} scale={1.3}>
           <icosahedronGeometry args={[1, 1]} />
           <MeshDistortMaterial
             color={isDark ? "#4f46e5" : "#6366f1"}
             emissive={isDark ? "#1e1b4b" : "#312e81"}
             roughness={0.2}
             metalness={0.8}
-            distort={0.3}
+            distort={0.25}
             speed={2}
           />
         </mesh>
 
         {/* Outer Wireframe Lattice */}
-        <mesh ref={wireframeRef} scale={2.3}>
+        <mesh ref={wireframeRef} scale={1.7}>
           <icosahedronGeometry args={[1, 1]} />
           <meshBasicMaterial
             wireframe
@@ -70,8 +70,8 @@ function InteractiveCore() {
         </mesh>
 
         {/* Orbiting Tech Ring */}
-        <mesh ref={ringRef} scale={2.8}>
-          <torusGeometry args={[1, 0.02, 16, 64]} />
+        <mesh ref={ringRef} scale={2.1}>
+          <torusGeometry args={[1, 0.025, 16, 64]} />
           <meshStandardMaterial
             color={isDark ? "#38bdf8" : "#0284c7"}
             emissive={isDark ? "#0ea5e9" : "#0284c7"}
@@ -81,7 +81,7 @@ function InteractiveCore() {
         </mesh>
 
         {/* Small Orbiting Data Node 1 */}
-        <mesh position={[2.5, 0.8, 0]} scale={0.18}>
+        <mesh position={[1.9, 0.6, 0]} scale={0.14}>
           <sphereGeometry args={[1, 16, 16]} />
           <meshStandardMaterial
             color="#06b6d4"
@@ -91,7 +91,7 @@ function InteractiveCore() {
         </mesh>
 
         {/* Small Orbiting Data Node 2 */}
-        <mesh position={[-2.2, -1, 0.5]} scale={0.15}>
+        <mesh position={[-1.7, -0.8, 0.4]} scale={0.12}>
           <sphereGeometry args={[1, 16, 16]} />
           <meshStandardMaterial
             color="#8b5cf6"
@@ -105,13 +105,13 @@ function InteractiveCore() {
 }
 
 function FloatingParticles() {
-  const count = 40;
+  const count = 35;
   const positions = React.useMemo(() => {
     const pos = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
-      pos[i * 3] = (Math.random() - 0.5) * 12;
-      pos[i * 3 + 1] = (Math.random() - 0.5) * 12;
-      pos[i * 3 + 2] = (Math.random() - 0.5) * 6;
+      pos[i * 3] = (Math.random() - 0.5) * 8;
+      pos[i * 3 + 1] = (Math.random() - 0.5) * 8;
+      pos[i * 3 + 2] = (Math.random() - 0.5) * 4;
     }
     return pos;
   }, []);
@@ -140,12 +140,12 @@ export default function Hero3DScene() {
   const isDark = resolvedTheme === "dark";
 
   return (
-    <div className="relative w-full h-[380px] sm:h-[460px] md:h-[540px] flex items-center justify-center">
+    <div className="relative w-full max-w-[480px] h-[340px] sm:h-[420px] md:h-[480px] flex items-center justify-center">
       {/* Ambient background glow behind 3D canvas */}
-      <div className="absolute inset-0 max-w-md mx-auto rounded-full bg-gradient-to-tr from-indigo-600/20 via-cyan-500/15 to-purple-600/20 blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 max-w-sm mx-auto rounded-full bg-gradient-to-tr from-indigo-600/20 via-cyan-500/15 to-purple-600/20 blur-3xl pointer-events-none" />
 
       <Canvas
-        camera={{ position: [0, 0, 6], fov: 45 }}
+        camera={{ position: [0, 0, 7.2], fov: 45 }}
         dpr={[1, 1.5]}
         gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
         className="w-full h-full cursor-grab active:cursor-grabbing"

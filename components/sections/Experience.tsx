@@ -3,7 +3,7 @@ import { portfolioData } from "@/constants/constants";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { Briefcase, Calendar, MapPin, ExternalLink } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 
 export function Experience() {
   const { experience, settings } = portfolioData;
@@ -36,22 +36,9 @@ export function Experience() {
                 {/* Header row */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-black/5 dark:border-white/10">
                   <div>
-                    <div className="flex items-center gap-2">
-                      <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-                        {item.role}
-                      </h3>
-                      {item.companyUrl && (
-                        <a
-                          href={item.companyUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-slate-400 hover:text-indigo-500 dark:hover:text-cyan-400 transition-colors"
-                          aria-label={`Visit ${item.company}`}
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
-                      )}
-                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                      {item.role}
+                    </h3>
                     <div className="text-base font-semibold text-indigo-600 dark:text-cyan-400 mt-0.5">
                       {item.company}
                     </div>

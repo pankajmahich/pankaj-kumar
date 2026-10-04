@@ -17,7 +17,7 @@ import {
   AlertCircle,
   ExternalLink,
 } from "lucide-react";
-import { GithubIcon, LinkedinIcon, TwitterIcon, DiscordIcon } from "@/components/ui/Icons";
+import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/ui/Icons";
 import confetti from "canvas-confetti";
 
 export function Contact() {
@@ -32,7 +32,6 @@ export function Contact() {
     github: <GithubIcon className="w-4 h-4" />,
     linkedin: <LinkedinIcon className="w-4 h-4" />,
     twitter: <TwitterIcon className="w-4 h-4" />,
-    discord: <DiscordIcon className="w-4 h-4" />,
   };
 
   const handleCopyEmail = () => {

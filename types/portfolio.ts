@@ -37,7 +37,9 @@ export interface SocialLinks {
 export interface HeroData {
   badge: string;
   greeting: string;
+  headlinePrefix?: string;
   headlineHighlight: string;
+  headlineSuffix?: string;
   description: string;
   primaryCta: {
     text: string;

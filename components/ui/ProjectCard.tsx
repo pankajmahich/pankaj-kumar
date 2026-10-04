@@ -83,7 +83,7 @@ export function ProjectCard({ project }: { project: ProjectItem }) {
       </div>
 
       {/* Card Footer CTAs */}
-      <div className="p-6 pt-0 border-t border-black/5 dark:border-white/10 mt-6 flex items-center justify-between gap-3">
+      <div className="px-6 py-5 border-t border-black/5 dark:border-white/10 flex items-center justify-between gap-3">
         {project.liveUrl ? (
           <Button
             variant="primary"
