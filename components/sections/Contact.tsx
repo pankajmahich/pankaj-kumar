@@ -236,9 +236,12 @@ export function Contact() {
                     </div>
                     <div>
                       <div className="text-xs text-slate-400">Phone</div>
-                      <div className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white mt-0.5">
+                      <a
+                        href={`tel:${personal.phone.replace(/\s+/g, "")}`}
+                        className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-cyan-400 transition-colors mt-0.5 block"
+                      >
                         {personal.phone}
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </Card>

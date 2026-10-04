@@ -21,7 +21,7 @@ export const portfolioData = {
     tagline: "Building scalable full-stack web applications and intelligent AI workflow automations.",
     shortBio: "Computer Science and Engineering student with hands-on experience in MERN stack development and AI workflow automation using n8n. Passionate about building scalable web applications and automated digital pipelines.",
     email: "pankajmahich180@gmail.com",
-    phone: "+91 91168 17112",
+    phone: "+91 97728 06652",
     location: "Udaipur, Rajasthan, India",
     availability: {
       status: "Available for Web Development & AI Automation Projects",
